@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<title>资信证书信息</title>
+<style>
+html, body{
+  width:100%;height:100%;
+  margin:0;padding:0;
+  background:#f5f7fa;
+  font-family:"Microsoft YaHei",Arial,sans-serif;
+}
+
+.container{
+  max-width:900px;
+  margin:0 auto;
+  padding:16px;
+  background:#fff;
+  border-radius:8px;
+  box-shadow:0 1px 4px rgba(0,0,0,.06);
+}
+
+.table-title{
+  text-align:center;
+  font-weight:700;
+  font-size:22px;
+  color:#222;
+  margin:4px 0 18px;
+}
+
+/* 顶部基础信息四列表 */
+.inline-table1{
+  display:grid!important;
+  grid-template-columns:17.5% 32.5% 17.5% 32.5%!important;
+  border:1px solid #e6ecf2;
+  border-radius:6px;
+  overflow:hidden;
+}
+.inline-table1 .key,.inline-table1 .value{
+  padding:10px 12px!important;
+  font-size:9px!important;
+  border-top:1px solid #e3edfb;
+  border-right:1px solid #e3edfb;
+  box-sizing:border-box;
+  display:flex!important;
+  align-items:center;
+}
+.inline-table1 .key{background:#f6faff!important;color:#333!important;}
+.inline-table1 .value{background:#fff!important;color:#444!important;}
+.inline-table1>div:nth-child(4n){border-right:none!important;}
+.inline-table1>div:nth-child(-n+4){border-top:none!important;}
+.inline-table1 .status-key{background:#f6faff;color:#333;}
+.inline-table1 .status-value{
+  grid-column:span 3;
+  border-top:1px solid #e3edfb;
+  border-right:none;
+  background:#fff;
+  color:#444;
+}
+
+.base-info{ margin-bottom:20px; }
+
+/* ===== 业务表：铺满容器，不要竖线 ===== */
+.table-wrapper{ display:block; }
+
+.table{
+  background:#fff;
+  border:1px solid #e6ecf2;
+  border-radius:6px;
+  overflow:hidden;
+  width:100% !important;
+  max-width:none;
+  margin:0;
+}
+
+.table-th{
+  display:grid;
+  grid-template-columns:32% 23% 23% 22%;
+  background:#f0f4fa;
+  color:#2b313a;
+  font-weight:600;
+}
+
+.table-th>div,.table-tr>div{
+  padding:10px 12px;
+  font-size:9px;
+  border-top:1px solid #e3edfb;
+  border-right:none;
+  text-align:center;
+  color:#444;
+}
+
+.table-tr{
+  display:grid;
+  grid-template-columns:32% 23% 23% 22%;
+  background:#fff;
+}
+
+@media (max-width:768px){
+  .table{ width:100% !important; }
+}
+</style>
+</head>
+<body>
+  <div class="container">
+    <div class="table-title">资信证书信息</div>
+
+    <!-- 顶部信息表 -->
+    <div class="base-info">
+      <div class="inline-table1" id="base-info-table">
+        <div class="key">级别</div><div class="value">乙级</div>
+        <div class="key">证件类型</div><div class="value">专业资信</div>
+        <div class="key">颁发机构</div><div class="value">贵州省工程咨询协会</div>
+        <div class="key">单位名称</div><div class="value">中工黔诚设计（集团）有限公司</div>
+        <div class="key">统一社会信用代码</div><div class="value">91320902788854895B</div>
+        <div class="key">证件编号</div><div class="value">乙预292024010116</div>
+        <div class="key status-key">证书状态</div>
+        <div class="value status-value"><span style="color:#444;font-weight:700;">有效</span></div>
+      </div>
+    </div>
+
+    <!-- 业务表 -->
+    <div class="base-info table-wrapper">
+      <div class="table">
+        <div class="table-th">
+          <div>业务</div><div>发证日期</div><div>有效期</div><div>状态</div>
+        </div>
+        <div id="table-body">
+          <div class="table-tr">
+            <div>建筑工程</div>
+            <div>2025-08-31</div>
+            <div>2026-08-30</div>
+            <div style="font-weight:700;color:#444;">有效</div>
+          </div>
+          <div class="table-tr">
+            <div>市政公用工程</div>
+            <div>2025-08-31</div>
+            <div>2026-08-30</div>
+            <div style="font-weight:700;color:#444;">有效</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>
